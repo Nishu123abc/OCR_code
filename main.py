@@ -22,6 +22,7 @@ new_df = df['Mobile_No'].apply(lambda x: x.replace(" ","").replace("-",""))
 
 new_df = new_df.apply(lambda x: x.split("91",1)[1] if len(x) > 10 and x.startswith("91") else x)
 print(new_df)
+"adding new line"
 
 
 # select orederstatus from (select Order status, danse_rank() over(partition by OrderId orderby(OrderDate) desc) rnk from table where rnk = 1);
